@@ -271,7 +271,7 @@ section .detail #description {
 /* Main Start */
 
 #content {
-  scroll-margin-top: 2rem; /* Sesuaikan dengan tinggi navbar Anda */
+  scroll-margin-top: 2rem; 
 }
 
 main {
@@ -338,7 +338,7 @@ main .main-content .product h1,
 
 #contact {
   /* Properti lainnya */
-  scroll-margin-top: 4.5rem; /* Sesuaikan dengan tinggi navbar Anda */
+  scroll-margin-top: 4.5rem; 
 }
 
 div.contact {
@@ -508,3 +508,59 @@ footer .footer-bottom p {
 }
 /* Footer End */
 
+/* CSS untuk tampilan toast */
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none; /* Menghindari interferensi dengan elemen lain */
+}
+
+#toast {
+  position: fixed;
+  top: 50px; /* Posisi dari atas (sesuaikan jika diperlukan) */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 16px 32px; /* Padding diperbesar */
+  border-radius: 8px;
+  font-size: 1.25rem; /* Ukuran font diperbesar */
+  z-index: 999;
+  transition: opacity 0.3s;
+}
+
+#toast.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animasi muncul dan menghilang */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
