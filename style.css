@@ -1,0 +1,510 @@
+:root {
+  --primary: #19a7ce;
+  --secondary: #146c94;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--bg);
+  padding: 1rem 2rem; /* Padding vertikal dan horizontal sedikit dikurangi */
+  height: 4rem; /* Tinggi Navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan shadow untuk efek elevasi */
+  z-index: 1000; /* Pastikan Navbar tampil di atas konten lainnya */
+  width: 100%; /* Navbar mengambil lebar 100% */
+  transition: background-color 0.3s; /* Efek perubahan warna ketika scroll */
+}
+
+.navbar .navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 1.25rem; /* Ukuran teks usahaoptima */
+  margin-right: 3rem; /* Jarak antara logo dan teks */
+}
+
+.navbar .logo img {
+  width: 3rem; /* Ukuran logo */
+  height: 3rem; /* Ukuran logo */
+  margin-right: 0.1rem; /* Jarak antara logo dan teks */
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 1.5rem; /* Jarak antara tautan Navbar */
+  list-style: none;
+}
+
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .navbar-extra .button {
+  text-decoration: none;
+  color: var(--secondary);
+  font-weight: 500;
+  margin-right: 1rem; /* Jarak antara tombol */
+  padding: 0.5rem 1rem; /* Padding tombol */
+  border-radius: 0.375rem;
+  border: 1px solid var(--secondary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .navbar-extra .button:hover {
+  background-color: var(--secondary);
+  color: var(--bg);
+}
+
+.navbar .navbar-extra .button2 {
+  text-decoration: none;
+  color: var(--bg);
+  font-weight: 500;
+  margin-right: 1rem; /* Jarak antara tombol */
+  padding: 0.5rem 1rem; /* Padding tombol */
+  border-radius: 0.375rem;
+  background-color: var(--primary);
+  transition: background-color 0.3s;
+}
+
+.navbar .navbar-extra .button2:hover {
+  background-color: var(--secondary);
+  color: var(--bg);
+}
+
+/* Tampilan Navbar ketika di-scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* Warna latar Navbar saat di-scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tetapkan shadow saat di-scroll */
+  transition: background-color 0.3s;
+}
+
+/* Navbar End */
+
+
+/* Header Start */
+
+header#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 100vh;
+  margin-top: 2rem;
+  margin-left: 120px;
+  color: var(--primary);
+}
+
+header#hero .hero-content {
+  width: 50%;
+  margin-top: 62px;
+}
+
+header#hero .hero-content h1 {
+  margin-bottom: 16px; /* Mengurangi jarak antara h1 dan h2 */
+  font-weight: bold;
+  font-size: 28px; /* Ukuran font yang lebih besar */
+  line-height: 1.2; /* Line-height untuk memperbaiki tampilan teks */
+}
+
+header#hero .hero-content h2 {
+  font-size: 20px; /* Ukuran font h2 yang lebih kecil */
+  line-height: 1.4; /* Line-height untuk memperbaiki tampilan teks */
+}
+
+header#hero .hero-content .btn {
+  font-size: 18px; /* Ukuran font yang lebih besar */
+  width: 160px; /* Lebar tombol yang lebih besar */
+  height: 50px; /* Tinggi tombol yang lebih besar */
+  margin-top: 32px;
+  margin-bottom: 48px; /* Mengurangi jarak antara tombol dan ikon sosial */
+  border-radius: 12px;
+  background-color: var(--primary);
+  border-style: none;
+  color: #fff;
+  text-decoration: none; /* Menghilangkan underline pada tombol */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Efek hover */
+}
+
+header#hero .hero-content .btn:hover {
+  background-color: var(--secondary);
+  color: var(--bg);}
+
+header#hero .umkm-img {
+  width: 680px;
+  margin-top: 62px;
+  margin-right: -30px;
+}
+
+.icons .fa-brands {
+  font-size: 41px;
+  margin-right: 32px;
+  color: var(--secondary);
+}
+
+.icons {
+  margin-top: 32px; /* Jarak antara ikon dengan teks */
+}
+
+.social-icon {
+  font-size: 36px; /* Ukuran font ikon yang lebih kecil */
+  margin: 0 16px; /* Jarak antara ikon */
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #146c94;
+}
+
+/* Header End */
+
+
+/* Section Start */
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  padding: 100px 0;
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/bg-section.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+section .umkm-img2 {
+  margin-left: -200px;
+  transform: translateY(-20px);
+}
+
+section .detail {
+  max-width: 516px; /* Menggunakan max-width agar teks tidak terlalu ke kanan */
+  text-align: center;
+  margin-right: 5rem;
+}
+
+section .detail .detail-1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+section .detail .detail-2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-top: -8px;
+}
+
+section .detail #description {
+  font-size: 18px;
+  margin-top: 32px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Section End */
+
+
+/* Main Start */
+
+#content {
+  scroll-margin-top: 2rem; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+main {
+  width: 100%;
+  min-height: 90vh;
+  padding: 50px;
+}
+
+main .main-title {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 80px;
+}
+
+main .main-content {
+  display: grid; /* Menggunakan CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* Empat kolom card */
+  gap: 24px; /* Jarak antara card */
+  justify-items: center; /* Posisi card ke tengah */
+}
+
+main .main-content .product,
+.penjualan,
+.edukasi,
+.laporan {
+  text-align: center;
+  width: 100%; /* Lebar setiap card 100% agar mengisi kolom grid */
+  background-color: #f6f1f1;
+  border: 1px solid #f6f1f1;
+  border-radius: 46px;
+  padding: 24px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+main .main-content .product img,
+.penjualan img,
+.edukasi img,
+.laporan img {
+  padding: 24px;
+  max-width: 100%;
+}
+
+main .main-content .product h1,
+.penjualan h1,
+.edukasi h1,
+.laporan h1 {
+  padding-bottom: 24px;
+  color: var(--primary);
+}
+
+/* Efek transisi untuk produk */
+.main-content .product:hover,
+.main-content .penjualan:hover,
+.main-content .edukasi:hover,
+.main-content .laporan:hover {
+  transform: scale(1.05);
+}
+
+/* Main End */
+
+
+/* Contact Start */
+
+#contact {
+  /* Properti lainnya */
+  scroll-margin-top: 4.5rem; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+div.contact {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 150px;
+  margin-bottom: 5rem;
+}
+
+div.contact h1 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+div.contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+div.contact .contact-info i {
+  font-size: 48px;
+  color: var(--primary);
+}
+
+div.contact .contact-info a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+div.contact form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  background-color: var(--bg);
+}
+
+div.contact form #warning {
+  color: red;
+  margin-top: 1rem;
+}
+
+div.contact form label {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+div.contact form input {
+  margin: 10px 0px 10px 0px;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: lightblue;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+}
+
+div.contact form #check {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+div.contact form button {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 32px;
+  background-color: var(--primary);
+  text-decoration: none;
+  color: var(--bg);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+div.contact form button:hover {
+  background-color: var(--secondary);
+  color: var(--bg);
+}
+
+/* Contact End */
+
+
+
+
+/* Footer Start */
+footer {
+  width: 100%; /* Membuat footer memiliki lebar satu halaman */
+  background-color: var(--bg);
+  padding: 48px 0;
+  color: var(--primary);
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Membatasi lebar maksimum konten footer */
+  margin: 0 auto; /* Pusatkan konten footer secara horizontal */
+  padding: 0 24px; /* Tambahkan padding kiri-kanan */
+}
+
+footer .footer-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer .footer-title a {
+  text-decoration: none;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-title .logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+footer .footer-title p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+footer .footer-icons {
+  margin-top: 16px;
+}
+
+footer .footer-icons .social-icon {
+  font-size: 24px;
+  margin: 0 12px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-icons .social-icon:hover {
+  color: #146c94;
+}
+
+footer .footer-bottom {
+  margin-top: 32px;
+}
+
+footer .footer-bottom .line {
+  border-top: 1px solid var(--primary);
+  margin: 16px 0;
+}
+
+footer .footer-bottom p {
+  font-size: 14px;
+}
+/* Footer End */
+
