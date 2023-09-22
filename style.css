@@ -489,6 +489,21 @@ footer .footer-bottom .line {
 footer .footer-bottom p {
   font-size: 14px;
 }
+
+footer .footer-year {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+footer .footer-year a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .footer-year a:hover {
+  color: #146c94;
+}
 /* Footer End */
 
 /* CSS untuk tampilan toast */
