@@ -1,7 +1,7 @@
 :root {
-  --primary: #19a7ce;
-  --secondary: #146c94;
-  --bg: #fff;
+  --primary-color: #19a7ce;
+  --secondary-color: #146c94;
+  --bg-color: #fff;
 }
 
 * {
@@ -13,12 +13,11 @@
 
 body {
   font-family: "Urbanist", sans-serif;
-  background-color: #fff;
+  background-color: var(--bg-color);
   overflow-x: hidden;
 }
 
-/* Navbar */
-
+/* Navbar Start */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -27,13 +26,13 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  background-color: var(--bg);
-  padding: 1rem 2rem; /* Padding vertikal dan horizontal sedikit dikurangi */
-  height: 4rem; /* Tinggi Navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan shadow untuk efek elevasi */
-  z-index: 1000; /* Pastikan Navbar tampil di atas konten lainnya */
-  width: 100%; /* Navbar mengambil lebar 100% */
-  transition: background-color 0.3s; /* Efek perubahan warna ketika scroll */
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  height: 4rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
 .navbar .navbar-content {
@@ -45,33 +44,33 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--secondary-color);
   font-weight: bold;
-  font-size: 1.25rem; /* Ukuran teks usahaoptima */
-  margin-right: 3rem; /* Jarak antara logo dan teks */
+  font-size: 1.25rem;
+  margin-right: 3rem;
 }
 
 .navbar .logo img {
-  width: 3rem; /* Ukuran logo */
-  height: 3rem; /* Ukuran logo */
-  margin-right: 0.1rem; /* Jarak antara logo dan teks */
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.1rem;
 }
 
 .navbar .navbar-nav {
   display: flex;
-  gap: 1.5rem; /* Jarak antara tautan Navbar */
+  gap: 1.5rem;
   list-style: none;
 }
 
 .navbar .navbar-nav a {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--secondary-color);
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar .navbar-nav a:hover {
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 .navbar .navbar-extra {
@@ -82,48 +81,45 @@ body {
 
 .navbar .navbar-extra .button {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--secondary-color);
   font-weight: 500;
-  margin-right: 1rem; /* Jarak antara tombol */
-  padding: 0.5rem 1rem; /* Padding tombol */
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.375rem;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secondary-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar .navbar-extra .button:hover {
-  background-color: var(--secondary);
-  color: var(--bg);
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
 }
 
 .navbar .navbar-extra .button2 {
   text-decoration: none;
-  color: var(--bg);
+  color: var(--bg-color);
   font-weight: 500;
-  margin-right: 1rem; /* Jarak antara tombol */
-  padding: 0.5rem 1rem; /* Padding tombol */
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.375rem;
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   transition: background-color 0.3s;
 }
 
 .navbar .navbar-extra .button2:hover {
-  background-color: var(--secondary);
-  color: var(--bg);
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
 }
 
 /* Tampilan Navbar ketika di-scroll */
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95); /* Warna latar Navbar saat di-scroll */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tetapkan shadow saat di-scroll */
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
 }
-
 /* Navbar End */
 
-
 /* Header Start */
-
 header#hero {
   display: flex;
   align-items: center;
@@ -132,7 +128,7 @@ header#hero {
   height: 100vh;
   margin-top: 2rem;
   margin-left: 120px;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 header#hero .hero-content {
@@ -141,38 +137,39 @@ header#hero .hero-content {
 }
 
 header#hero .hero-content h1 {
-  margin-bottom: 16px; /* Mengurangi jarak antara h1 dan h2 */
+  margin-bottom: 16px;
   font-weight: bold;
-  font-size: 28px; /* Ukuran font yang lebih besar */
-  line-height: 1.2; /* Line-height untuk memperbaiki tampilan teks */
+  font-size: 28px;
+  line-height: 1.2;
 }
 
 header#hero .hero-content h2 {
-  font-size: 20px; /* Ukuran font h2 yang lebih kecil */
-  line-height: 1.4; /* Line-height untuk memperbaiki tampilan teks */
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 header#hero .hero-content .btn {
-  font-size: 18px; /* Ukuran font yang lebih besar */
-  width: 160px; /* Lebar tombol yang lebih besar */
-  height: 50px; /* Tinggi tombol yang lebih besar */
+  font-size: 18px;
+  width: 160px;
+  height: 50px;
   margin-top: 32px;
-  margin-bottom: 48px; /* Mengurangi jarak antara tombol dan ikon sosial */
+  margin-bottom: 48px;
   border-radius: 12px;
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   border-style: none;
   color: #fff;
-  text-decoration: none; /* Menghilangkan underline pada tombol */
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s; /* Efek hover */
+  transition: background-color 0.3s;
 }
 
 header#hero .hero-content .btn:hover {
-  background-color: var(--secondary);
-  color: var(--bg);}
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
 
 header#hero .umkm-img {
   width: 680px;
@@ -183,17 +180,17 @@ header#hero .umkm-img {
 .icons .fa-brands {
   font-size: 41px;
   margin-right: 32px;
-  color: var(--secondary);
+  color: var(--secondary-color);
 }
 
 .icons {
-  margin-top: 32px; /* Jarak antara ikon dengan teks */
+  margin-top: 32px;
 }
 
 .social-icon {
-  font-size: 36px; /* Ukuran font ikon yang lebih kecil */
-  margin: 0 16px; /* Jarak antara ikon */
-  color: var(--primary);
+  font-size: 36px;
+  margin: 0 16px;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -201,19 +198,16 @@ header#hero .umkm-img {
 .social-icon:hover {
   color: #146c94;
 }
-
 /* Header End */
 
-
 /* Section Start */
-
 section {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg);
+  background-color: var(--bg-color);
   padding: 100px 0;
   position: relative;
 }
@@ -238,7 +232,7 @@ section .umkm-img2 {
 }
 
 section .detail {
-  max-width: 516px; /* Menggunakan max-width agar teks tidak terlalu ke kanan */
+  max-width: 516px;
   text-align: center;
   margin-right: 5rem;
 }
@@ -246,14 +240,14 @@ section .detail {
 section .detail .detail-1 {
   font-size: 36px;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--primary-color);
   margin-bottom: 8px;
 }
 
 section .detail .detail-2 {
   font-size: 40px;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--secondary-color);
   margin-top: -8px;
 }
 
@@ -264,14 +258,11 @@ section .detail #description {
   line-height: 1.6;
   color: #333;
 }
-
 /* Section End */
 
-
 /* Main Start */
-
 #content {
-  scroll-margin-top: 2rem; 
+  scroll-margin-top: 2rem;
 }
 
 main {
@@ -282,15 +273,15 @@ main {
 
 main .main-title {
   text-align: center;
-  color: var(--primary);
+  color: var(--primary-color);
   margin-bottom: 80px;
 }
 
 main .main-content {
-  display: grid; /* Menggunakan CSS Grid */
-  grid-template-columns: repeat(4, 1fr); /* Empat kolom card */
-  gap: 24px; /* Jarak antara card */
-  justify-items: center; /* Posisi card ke tengah */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  justify-items: center;
 }
 
 main .main-content .product,
@@ -298,7 +289,7 @@ main .main-content .product,
 .edukasi,
 .laporan {
   text-align: center;
-  width: 100%; /* Lebar setiap card 100% agar mengisi kolom grid */
+  width: 100%;
   background-color: #f6f1f1;
   border: 1px solid #f6f1f1;
   border-radius: 46px;
@@ -320,7 +311,7 @@ main .main-content .product h1,
 .edukasi h1,
 .laporan h1 {
   padding-bottom: 24px;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 /* Efek transisi untuk produk */
@@ -330,18 +321,14 @@ main .main-content .product h1,
 .main-content .laporan:hover {
   transform: scale(1.05);
 }
-
 /* Main End */
 
-
-/* Contact Start */
-
-#contact {
-  /* Properti lainnya */
-  scroll-margin-top: 4.5rem; 
+/* register Start */
+#register {
+  scroll-margin-top: 4.5rem;
 }
 
-div.contact {
+div.register {
   width: 100%;
   min-height: 80vh;
   display: flex;
@@ -352,14 +339,14 @@ div.contact {
   margin-bottom: 5rem;
 }
 
-div.contact h1 {
-  color: var(--primary);
+div.register h1 {
+  color: var(--primary-color);
   text-transform: uppercase;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-div.contact .contact-info {
+div.register .register-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -367,38 +354,38 @@ div.contact .contact-info {
   text-align: center;
 }
 
-div.contact .contact-info i {
+div.register .register-info i {
   font-size: 48px;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
-div.contact .contact-info a {
+div.register .register-info a {
   font-size: 18px;
   text-decoration: none;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
-div.contact form {
+div.register form {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--primary-color);
   border-radius: 12px;
-  background-color: var(--bg);
+  background-color: var(--bg-color);
 }
 
-div.contact form #warning {
+div.register form #warning {
   color: red;
   margin-top: 1rem;
 }
 
-div.contact form label {
+div.register form label {
   font-weight: bold;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
-div.contact form input {
+div.register form input {
   margin: 10px 0px 10px 0px;
   padding: 0.5rem;
   width: 100%;
@@ -408,41 +395,37 @@ div.contact form input {
   color: #fff;
 }
 
-div.contact form #check {
+div.register form #check {
   display: block;
   margin-bottom: 1rem;
 }
 
-div.contact form button {
+div.register form button {
   margin-top: 12px;
   margin-bottom: 12px;
   border: none;
   border-radius: 12px;
   padding: 8px 32px;
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   text-decoration: none;
-  color: var(--bg);
+  color: var(--bg-color);
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-div.contact form button:hover {
-  background-color: var(--secondary);
-  color: var(--bg);
+div.register form button:hover {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
 }
-
-/* Contact End */
-
-
-
+/* register End */
 
 /* Footer Start */
 footer {
-  width: 100%; /* Membuat footer memiliki lebar satu halaman */
-  background-color: var(--bg);
+  width: 100%;
+  background-color: var(--bg-color);
   padding: 48px 0;
-  color: var(--primary);
+  color: var(--primary-color);
   text-align: center;
 }
 
@@ -450,9 +433,9 @@ footer .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* Membatasi lebar maksimum konten footer */
-  margin: 0 auto; /* Pusatkan konten footer secara horizontal */
-  padding: 0 24px; /* Tambahkan padding kiri-kanan */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 footer .footer-title {
@@ -462,7 +445,7 @@ footer .footer-title {
 
 footer .footer-title a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
 }
@@ -485,7 +468,7 @@ footer .footer-icons {
 footer .footer-icons .social-icon {
   font-size: 24px;
   margin: 0 12px;
-  color: var(--primary);
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -499,7 +482,7 @@ footer .footer-bottom {
 }
 
 footer .footer-bottom .line {
-  border-top: 1px solid var(--primary);
+  border-top: 1px solid var(--primary-color);
   margin: 16px 0;
 }
 
@@ -514,19 +497,19 @@ footer .footer-bottom p {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  pointer-events: none; /* Menghindari interferensi dengan elemen lain */
+  pointer-events: none;
 }
 
 #toast {
   position: fixed;
-  top: 50px; /* Posisi dari atas (sesuaikan jika diperlukan) */
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
   color: #fff;
-  padding: 16px 32px; /* Padding diperbesar */
+  padding: 16px 32px;
   border-radius: 8px;
-  font-size: 1.25rem; /* Ukuran font diperbesar */
+  font-size: 1.25rem;
   z-index: 999;
   transition: opacity 0.3s;
 }
@@ -535,7 +518,6 @@ footer .footer-bottom p {
   opacity: 0;
   pointer-events: none;
 }
-
 
 .toast.show {
   opacity: 1;
